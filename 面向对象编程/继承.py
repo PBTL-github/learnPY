@@ -14,7 +14,13 @@ class Animal:
 
 class Dog(Animal):
     def eat(self):
+        super().eat()
         print("eat")
+
+    def run(self):
+        # python2.0版本中使用父类方法的写法
+        Animal.run(self)
+        print("run")
 
     def bark(self):
         print("狗叫")
@@ -22,3 +28,4 @@ class Dog(Animal):
 
 dog = Dog()
 dog.eat()
+dog.run()
